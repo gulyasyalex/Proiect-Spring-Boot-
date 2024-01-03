@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .wrong-info{
+            padding: 10px;
+            margin: 20px auto;
+            color: red;
+            background-color: rgba(255, 0, 0, 0.1);
+            border-left: 6px solid red;
+        }
+        .right-info{
+            padding: 10px;
+            margin: 20px auto;
+            color: green;
+            background-color: rgba(0, 255, 0, 0.1);
+            border-left: 6px solid green;
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .login-container h2 {
+            text-align: center;
+        }
+
+        .login-form {
+            margin-top: 20px;
+        }
+
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            width: 95%;
+            margin: 10px 0 ;
+			padding: 10px;
+            border: 1px solid #aaa399;
+        }
+
+        .login-form input[type="submit"] {
+            margin-top: 2px;
+            color: black;
+            border: 2px solid #aaa399;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .login-form input[type="submit"]:hover {
+            background-color: #aaa399;
+            color:white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="wrong-info" th:if="${param.error}">
+            Nume utilizator sau parola gresita!
+        </div>
+        <div class="right-info" th:if="${param.logout}">
+            Ati fost delogat!
+        </div>
+        <form class="login-form" th:action="@{/login}" method="post">
+            <input type="text" name="username" placeholder="Username" required autofocus="autofocus">
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>

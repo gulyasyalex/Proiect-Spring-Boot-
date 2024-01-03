@@ -1,0 +1,4 @@
+"id_utilizator";"nume";"utilizator";"parola";"role"
+90;"Admin";"admin";"$2a$10$LyDD8gofbuL/CF3iI8UHTOBqggOQu13ml3f36DTcKlK02oGY8HNue";"ROLE_ADMIN"
+91;"User";"user";"$2a$10$gIqrPc9icQwkZgoYYp4tIONuJKfxVmqhn0iOfsZe6O2sV2g8aHB..";"ROLE_USER"
+92;"Alex";"alex";"$2a$10$/Iw.m.JHjPDs/qVMPm.3UejFryvE231iHkqxIR4kXWoW/mGnGTPt.";"ROLE_ADMIN"
